@@ -92,4 +92,54 @@ input::placeholder {
   transform: scale(0.975);
 }
 
-/* ============================== Navbar ============================== */
+/* ============================== Main ============================== */
+.profile-container {
+  background-color: var(--lm-bg-content);
+  border-radius: 15px;
+  margin-top: 26px;
+  box-shadow: var(--lm-shadow-inactive);
+}
+
+.content {
+  width: 280px;
+  height: 481px;
+  min-height: 517px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.profile-info-container {
+  display: flex;
+}
+#avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 90px;
+}
+
+.profile-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.profile-name h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--lm-text-alt);
+}
+#username {
+  color: var(--btn);
+}
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 70px;
+  margin-left: 20px;
+  width: fit-content;
+}
+#bio {
+  line-height: 25px;
+}
