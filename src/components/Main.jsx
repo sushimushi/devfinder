@@ -9,7 +9,7 @@ const Main = (prop) => {
     const data = prop.data
     return (
         <main className='profile-container' style={{ backgroundColor: prop.data.mode ? "white" : "#1D2A47" }} >
-            <div className="content">
+            <div className="content" style={{ display: prop.data.message ? 'none' : "block" }}>
 
                 <Info data={data} />
                 <p id='bio'>{data.bio ? data.bio : "This profile has no bio"}</p>

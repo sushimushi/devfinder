@@ -38,7 +38,7 @@ const Header = (prop) => {
                 <div className='error'>
                     <p
                         className="no-results"
-                        style={{ display: true ? 'none' : 'block' }}
+                        style={{ display: prop.data.message ? 'block' : 'none' }}
                     >No results</p>
                 </div>
             </div>

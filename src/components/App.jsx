@@ -11,7 +11,6 @@ const App = () => {
       .then(res => res.json())
       .then(data => mapdata(data))
       .catch(error => { throw error })
-    console.log(profile)
   }, [username])
 
   //adding mode
@@ -32,7 +31,7 @@ const App = () => {
       twitter_username: data.twitter_username,
       mode: false,
       search: '',
-
+      message: data.message
     })
   }
 
@@ -41,6 +40,7 @@ const App = () => {
       ...data,
       mode: !data.mode
     }))
+    console.log(profile)
   }
   function handleChange(event) {
     setProfile(data => ({
