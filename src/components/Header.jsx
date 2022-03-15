@@ -1,28 +1,28 @@
 import React from 'react';
 import Moon from '../assets/icon-moon.svg'
+import Sun from '../assets/icon-sun.svg'
 import Search from '../assets/icon-search.svg'
 
-const Header = () => {
+const Header = (prop) => {
+    const mode = prop.data.mode
 
-    const style = {
-        display: true ? 'none' : 'block'
-    }
+
     return (
 
         <header>
             <section className='header'>
                 <h1>devfinder</h1>
-                <div className='mode-btn'>
-                    <p>DARK</p>
-                    <img src={Moon} alt="" />
+                <div className='mode-btn' onClick={prop.togglemode}>
+                    <p> {mode ? 'DARK' : 'LIGHT'}</p>
+                    <img src={mode ? Moon : Sun} alt="" />
                 </div>
             </section>
-            <div className='searchbar'>
+            <div className='searchbar' style={{ backgroundColor: mode ? "white" : "#1D2A47" }} >
                 <img src={Search} alt="" />
                 <input type="search" name="user-input" placeholder="Search Github username..." />
-                <button class="btn-search" id="submit">Search</button>
+                <button className="btn-search" id="submit">Search</button>
                 <div className='error'>
-                    <p className="no-results" style={style}>No results</p>
+                    <p className="no-results" style={{ display: true ? 'none' : 'block' }}>No results</p>
                 </div>
 
             </div>

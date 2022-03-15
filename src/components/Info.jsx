@@ -1,17 +1,19 @@
 import React from 'react';
-import octocat from '../assets/octocat.png'
 
 
-const Info = () => {
+
+const Info = (prop) => {
+    const data = prop.data
+
     return (
         <section className='profile-info-container'>
-            <img id='avatar' src={octocat} alt="" />
+            <img id='avatar' src={data.avatar_url} alt="" />
             <div className='profile-info'>
                 <div className="profile-name">
-                    <h2 id='name'>The octocat</h2>
-                    <p id='username'>@octocat</p>
+                    <h2 id='name'>{data.name}</h2>
+                    <p id='username'>@{data.login}</p>
                 </div>
-                <p id='date'>Joined 25 Jan 2011</p>
+                <p id='date'>Joined {data.created_at}</p>
             </div>
         </section>
     );

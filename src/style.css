@@ -18,8 +18,12 @@
 }
 body {
   background-color: var(--lm-bg);
-  color: var(--lm-text);
   font-size: 13px;
+}
+.body {
+  color: var(--lm-text);
+  height: 100vh;
+  width: 100vw;
 }
 .container {
   max-width: 350px;
@@ -36,7 +40,7 @@ body {
 
 .mode-btn {
   align-items: center;
-  color: var(--lm-text);
+  color: inherit;
   cursor: pointer;
   display: flex;
   font-weight: bold;
@@ -68,6 +72,9 @@ input::placeholder {
   color: var(--lm-text);
   letter-spacing: -0.5px;
   font-size: 13px;
+}
+#name {
+  color: inherit;
 }
 .searchbar img {
   height: 23px;
