@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 const App = () => {
   //fetching data
-  const [username, setUsername] = useState('benawad')
+  const [username, setUsername] = useState('octocat')
   useEffect(() => {
     fetch(`https://api.github.com/users/${username}`)
       .then(res => res.json())
