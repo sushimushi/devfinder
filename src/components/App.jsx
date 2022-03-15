@@ -5,43 +5,51 @@ import { useEffect } from 'react';
 
 const App = () => {
   //fetching data
-  const [allData, setAllData] = useState({})
+  const [username, setUsername] = useState('benawad')
   useEffect(() => {
-    fetch('https://api.github.com/users/octocat')
+    fetch(`https://api.github.com/users/${username}`)
       .then(res => res.json())
-      .then(data => setAllData(data))
+      .then(data => mapdata(data))
       .catch(error => { throw error })
-    mapdata()
     console.log(profile)
-  }, [])
+  }, [username])
 
   //adding mode
   const [profile, setProfile] = useState({})
-  function mapdata() {
+  function mapdata(data) {
     setProfile({
-      avatar_url: allData.avatar_url,
-      bio: allData.bio,
-      blog: allData.blog,
-      company: allData.company,
-      created_at: allData.created_at,
-      followers: allData.followers,
-      following: allData.following,
-      location: allData.location,
-      login: allData.login,
-      name: allData.name,
-      public_repos: allData.public_repos,
-      twitter_username: allData.twitter_username,
+      avatar_url: data.avatar_url,
+      bio: data.bio,
+      blog: data.blog,
+      company: data.company,
+      created_at: data.created_at,
+      followers: data.followers,
+      following: data.following,
+      location: data.location,
+      login: data.login,
+      name: data.name,
+      public_repos: data.public_repos,
+      twitter_username: data.twitter_username,
       mode: false,
-      search: ''
+      search: '',
+
     })
   }
 
   function togglemode() {
-    console.log('clicked')
     setProfile(data => ({
       ...data,
       mode: !data.mode
     }))
+  }
+  function handleChange(event) {
+    setProfile(data => ({
+      ...data,
+      [event.target.name]: event.target.value
+    }))
+  }
+  function getProfile() {
+    setUsername(profile.search)
   }
 
 
@@ -53,7 +61,10 @@ const App = () => {
     }}>
 
       <div className='container' >
-        <Header data={profile} togglemode={togglemode} />
+        <Header data={profile}
+          togglemode={togglemode}
+          handleChange={handleChange}
+          getProfile={getProfile} />
         <Main data={profile} />
       </div>
     </div>
