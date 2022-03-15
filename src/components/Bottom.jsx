@@ -6,22 +6,30 @@ import Company from '../assets/icon-company.svg';
 
 const Bottom = () => {
     return (
-        <section className='profile__bottom'>
-            <div className='links'>
-                <img src={Location} alt="" />
-                <p>San Fransisco</p>
+        <section className='profile__bottom-container'>
+            <div className='bottom-block'>
+                <div className='bottom-icon'>
+                    <img src={Location} alt="" />
+                </div>
+                <p className='bottom-text'>San Fransisco</p>
             </div>
-            <div className='links'>
-                <img src={Website} alt="" />
-                <p>https://github.blog</p>
+            <div className='bottom-block'>
+                <div className='bottom-icon'>
+                    <img src={Website} alt="" />
+                </div>
+                <p className='bottom-text'>https://github.blog</p>
             </div>
-            <div className='links'>
-                <img src={Twitter} alt="" />
-                <p>Not available</p>
+            <div className='bottom-block'>
+                <div className='bottom-icon'>
+                    <img src={Twitter} alt="" />
+                </div>
+                <p className='bottom-text'>Not available</p>
             </div>
-            <div className='links'>
-                <img src={Company} alt="" />
-                <p>@github</p>
+            <div className='bottom-block'>
+                <div className='bottom-block'>
+                    <img src={Company} alt="" />
+                </div>
+                <p className='bottom-text'>@github</p>
             </div>
 
 
