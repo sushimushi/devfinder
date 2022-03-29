@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://https://inspiring-shidharthlimboo-061a9e.netlify.app/]
+- Live Site URL: [https://sidlimboo-devfinder.netlify.app/]
 
 ### Built with
 
@@ -42,4 +42,4 @@ Users should be able to:
 
 ## Author
 
-- Website - [Shidharth Limboo](https://github.com/sushimushi)
+- Website - [Shidharth Limboo](https://shidharthlimboo.netlify.app/)
