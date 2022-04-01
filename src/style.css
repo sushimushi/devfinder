@@ -107,12 +107,13 @@ input::placeholder {
   background-color: var(--lm-bg-content);
   border-radius: 15px;
   margin-top: 26px;
+  padding: 20px 0 40px;
   box-shadow: var(--lm-shadow-inactive);
 }
 
 .content {
   width: 280px;
-  height: 481px;
+  height: 500px;
   min-height: 517px;
   margin: auto;
   display: flex;
@@ -152,11 +153,17 @@ input::placeholder {
 }
 #bio {
   line-height: 25px;
+  padding-top: 30px;
 }
+#date{
+  padding-top: 10px;
+}
+
 .profile-stats-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 16px;
   background-color: var(--lm-bg);
   border-radius: 10px;
   text-align: center;
@@ -178,6 +185,7 @@ input::placeholder {
 .profile__bottom-container {
   height: 127px;
   display: flex;
+  margin-top: 16px;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -316,14 +324,19 @@ input::placeholder {
     height: 70px;
   }
 
-  .profile__bottom-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-content: center;
-    gap: 15px;
-  }
-  #bio {
-    position: relative;
-    top: -50px;
-  }
+.profile__bottom-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.bottom-block{
+  display: flex;
+  align-items: center;
+}
+#bio {
+  position: relative;
+  top: -50px;
+}
 }
