@@ -19,9 +19,9 @@
 body {
   background-color: var(--lm-bg);
   font-size: 13px;
-  height:100vh;
 }
 .body {
+  height:100vh;
   color: var(--lm-text);
   width: 100vw;
 }
