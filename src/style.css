@@ -35,7 +35,7 @@ body {
   display: flex;
   height: 78px;
   justify-content: space-between;
-  padding-top: 10px;
+  padding-top: 50px;
 }
 
 .header h1 {
@@ -113,8 +113,7 @@ input::placeholder {
 
 .content {
   width: 280px;
-  height: 500px;
-  min-height: 517px;
+  min-height: 400px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -217,10 +216,6 @@ input::placeholder {
   .container {
     max-width: 573px;
   }
-
-  .header {
-    padding-top: 90px;
-  }
   .profile-container {
     margin-top: 24px;
   }
@@ -286,9 +281,6 @@ input::placeholder {
 @media screen and (min-width: 1440px) {
   .container {
     max-width: 730px;
-  }
-  .header {
-    padding-top: 100px;
   }
   .content {
     max-width: 480px;
