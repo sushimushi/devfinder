@@ -19,10 +19,10 @@
 body {
   background-color: var(--lm-bg);
   font-size: 13px;
+  height:100vh;
 }
 .body {
   color: var(--lm-text);
-  height: 100vh;
   width: 100vw;
 }
 .container {
